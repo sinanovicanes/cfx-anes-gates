@@ -14,9 +14,9 @@ ensure cfx-anes-gates
 
 [Preview](https://www.youtube.com/watch?v=oCpvvmFc7fA)
 
-# How To Add Gates
+# How to add gates?
 
-You can add as many gates you want from `cfx-anes-gates/config/client/config.lua`.
+You can add as many gates you want from `cfx-anes-gates/config/client.lua`.
 
 - Make sure you're adding a correct door model. E.g. prop_sec_barier_02a looks like a door but it doesn't function as a door, instead prop_sec_barrier_ld_02a is a door.
 - You can get all the locations by model using [CodeWalker](https://github.com/dexyfex/CodeWalker).
@@ -76,9 +76,9 @@ Config = {
 
 ## Why are locations statically typed?
 
-If you want to make a dynamic approach (which was my first try) you can't check if the object is a map object. If you don't care and you still want to make it dynamic there is a second problem. Players can break the barriers and game will create a new entity with same model for broken part. So you will be targeting this broken part (Assuming you will find the gates by their models). So you will start adding bunch of invalid gates to the system. And you need to keep controlling the gate entities to remove doors from the system when they are not exist. Basically you can still do it but is it worth it for a few gates?
+If you want to make a dynamic approach (which was my first try) you can't check is the object is a map object. If you don't care and you still want to make it dynamic there is a second problem. Players can break the barriers and game will create a new entity with same model for broken part. So you will be targeting this broken part (Assuming you will find the gates by their models). So you will start adding bunch of invalid gates to the system. And you need to keep controlling the gate entities to remove the doors from the system when they are no longer exist. Basically you can still do it but is it worth it for a few gates?
 
-TL-DR:
+TL;DR:
 You can make it dynamic but you need to do too many checks to make it right. So it's not worth it for a few gates.
 
 ## Contributing
@@ -88,4 +88,4 @@ You can make it dynamic but you need to do too many checks to make it right. So 
 
 ## Notes
 
-- Gates rarely still works like before but I spent too much time for this and I'm not planning to spend more.
+- Gates rarely works like before but I spent too much time for this and I'm not planning to spend more.
