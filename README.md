@@ -76,7 +76,7 @@ Config = {
 
 ## Why are locations statically typed?
 
-If you want to create a dynamic approach (which was my first try) you can't check if the object is a map object. If you don't care and you still want to make it dynamic there is a second problem. Players can break the barriers and game will create a new entity with same model for broken part. So you will be targeting this broken part (Assuming you will find the gates by their models). So you will start adding bunch of invalid gates to the system. And you need to keep controlling the gate entities to remove doors from the system when they are not exist. Basically you can still do it but is it worth it for a few gates?
+If you want to make a dynamic approach (which was my first try) you can't check if the object is a map object. If you don't care and you still want to make it dynamic there is a second problem. Players can break the barriers and game will create a new entity with same model for broken part. So you will be targeting this broken part (Assuming you will find the gates by their models). So you will start adding bunch of invalid gates to the system. And you need to keep controlling the gate entities to remove doors from the system when they are not exist. Basically you can still do it but is it worth it for a few gates?
 
 TL-DR:
 You can make it dynamic but you need to do too many checks to make it right. So it's not worth it for a few gates.
