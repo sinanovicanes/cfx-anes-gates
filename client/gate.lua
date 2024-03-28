@@ -25,6 +25,6 @@ function Gate:New(group, coords, gateIndex)
 end
 
 function Gate:Refresh()
-    DoorSystemSetAutomaticDistance(self.hash, DEFAULT_AUTOMATIC_DISTANCE, false, true)
-    DoorSystemSetAutomaticRate(self.hash, DEFAULT_AUTOMATIC_RATE, false, true)
+    DoorSystemSetAutomaticDistance(self.hash, self.group.options.distance or DEFAULT_AUTOMATIC_DISTANCE, false, true)
+    DoorSystemSetAutomaticRate(self.hash, self.group.options.rate or DEFAULT_AUTOMATIC_RATE, false, true)
 end
